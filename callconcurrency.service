@@ -1,9 +1,0 @@
-[Unit]
-Description=Concurrent Calls Service by echodaniel
-After=network.target
-
-[Service]
-ExecStart=/home/concurrentcalls.sh
-
-[Install]
-WantedBy=multi-user.target
