@@ -1,3 +1,3 @@
 #!/bin/bash
-#Script to monitor concurrent call channels and output to a CSV file. In testing right now.
-watch -t -n 10 "(date '+TIME,%Y-%m-%d,%H:%M:%S' ; ps aux | asterisk -rx 'core show channels' | egrep 'SIP/[[:digit:]]' | wc -l) | tee -a callconcurrency.csv" | xargs | sed -e 's/ /\,/g'
+#Script to monitor concurrent call channels and output to a CSV file. Outputs date, time, and number of concurrent calls to a CSV file.
+watch -t -n 10 "(date '+TIME,%Y-%m-%d,%H:%M:%S' ; ps aux | asterisk -rx 'core show channels' | egrep 'SIP/[[:digit:]]' | wc -l) | xargs |sed -e 's/ /\,/g' | tee -a callconcurrency.csv"
