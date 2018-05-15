@@ -4,6 +4,7 @@ After=network.target
 
 [Service]
 ExecStart=/home/concurrentcalls.sh
+Restart=Always
 
 [Install]
 WantedBy=multi-user.target
