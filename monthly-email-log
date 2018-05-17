@@ -1,1 +1,1 @@
-echo "This is the monthly automated call concurrency report. Please do not reply, as your response will come back undeliverable." | mailx -s "Monthly Call Concurrency Log" -a callconcurrency.csv reports@callconcurrency.com
+echo "This is the monthly automated call concurrency report. Please do not reply, as your response will come back undeliverable." | mailx -s "Monthly Call Concurrency Log" -a callconcurrency.csv your_email@your_mailserver.com
